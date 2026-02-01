@@ -86,7 +86,14 @@ curl - used to transfer data over the internet from host to server using various
 Below simply display contents of google.com on terminal.
 ![alt text](image-14.png)
 
+find - to find a file 
+![alt text](image-17.png)
 
+below output search .txt file in present directory
+![alt text](image-18.png)
+
+below output find and then execute ls -l for those files
+![alt text](image-19.png)
 
 - Group commands by category
 - Keep it concise and readable
