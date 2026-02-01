@@ -18,18 +18,25 @@ Follow these rules while creating your cheat sheet:
 - Include **at least 20 commands** with one‑line usage notes
 
 man - manual for linux commands
+
 ls - to list contents of directory/current directory
+
 pwd - to list present working directory
 ![alt text](image-1.png)
 
 touch - to change the timestamp of a file but its mostly used to create a filename
+
 cp - copy file/directory from 1 location to another
+
 mv - move file/directory from 1 location to another. its used to rename too.
+
 mkdir - to make directory
 ![alt text](image-3.png)
 
 rm - to remove file/directory. **NOTE** - Never use **rm -rf** always use loop or individual directory to remove.
+
 echo - print on screen the text/line or variable passed
+
 cat - to print file contents on screen or standard output or monitor
 ![alt text](image-4.png)
 
@@ -37,10 +44,12 @@ df - displays file system space usage. Below -h used for human readable format, 
 ![alt text](image-5.png)
 
 whoami - print user name
+
 id - print user name and group details
 ![alt text](image-6.png)
 
 rmdir - remove empty directory
+
 uname - print system information. OS release
 ![alt text](image-7.png)
 
