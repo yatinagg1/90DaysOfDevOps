@@ -54,16 +54,40 @@ uname - print system information. OS release
 ![alt text](image-7.png)
 
 ps - display current processes
+
 ![alt text](image-8.png)
 ![alt text](image-9.png)
+![alt text](image-15.png)
 
 top - display dynamic (changing) view of system processes
 ![alt text](image-10.png)
 
+htop - user friendly variant of top
+![alt text](image-16.png)
 
+kill - send signal to process. Generally used to kill process with kill -9 <PID>
+nohup - run command in background, even a user logout it keep on running.
+pstree - display running process in tree format, showing parent-child relationship.
 
 
 - Add **3 networking commands** (`ping`, `ip addr`, `dig`, `curl`, etc.)
+ping - to test ICMP packet to network host/ip address
+
+ip aadr or ip a - to print ethernet interface on the host
+![alt text](image-11.png)
+
+dig - DNS lookup utility
+![alt text](image-12.png)
+
+nslookup - query DNS interactively
+![alt text](image-13.png)
+
+curl - used to transfer data over the internet from host to server using various protocol like HTTP, FTP, SCP HTTPS etc. helpful in testing REST API. used to download, upload and send data using terminal. 
+Below simply display contents of google.com on terminal.
+![alt text](image-14.png)
+
+
+
 - Group commands by category
 - Keep it concise and readable
 
