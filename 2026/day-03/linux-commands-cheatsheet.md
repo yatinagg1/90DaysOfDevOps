@@ -95,6 +95,10 @@ below output search .txt file in present directory
 below output find and then execute ls -l for those files
 ![alt text](image-19.png)
 
+free - memory usage information
+![alt text](image-20.png)
+
+
 - Group commands by category
 - Keep it concise and readable
 

@@ -21,9 +21,10 @@ Follow these rules while creating your runbook:
 - Run and record output for **at least 8 commands** (save snippets in your runbook)  
   - **Environment basics (2):** `uname -a`, `lsb_release -a` (or `cat /etc/os-release`)  
   uname -a - print all system information
-  cat /etc/os-release - print only Linux release version details
+  cat /etc/os-release - print only Linux flavour , version release details of OS installed
+
   ![alt text](image.png)
-  
+
   - **Filesystem sanity (2):** create a throwaway folder and file, e.g., `mkdir /tmp/runbook-demo`, `cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo`  
   - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)  
   - **Disk / IO (2):** `df -h`, `du -sh /var/log`, `iostat`/`vmstat`/`dstat`  
