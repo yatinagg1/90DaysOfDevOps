@@ -7,10 +7,13 @@ Today’s goal is to **set the foundation for your DevOps journey**.
 - What is your understanding of DevOps and Cloud Engineering?
 Devops is a culture which is bridging the gap between Developers and Operations team, so software development, issue resolutions could be faster.
 ![alt text](image.png)
+
 - Why you are starting learning DevOps & Cloud?
 Being an IT professional need Growth. Need to know real work in IT that happens vis project works and daily tasks.
+
 - Where do you want to reach?
 Architect/Consultant in IT
+
 - How you will stay consistent every single day?
 Giving 2 hrs daily for study.
 
