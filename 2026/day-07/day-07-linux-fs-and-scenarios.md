@@ -33,7 +33,7 @@ Document the purpose of these **essential** directories:
 ![alt text](image.png)
 
 **Hands-on task:**
-```bash
+
 # Find the largest log file in /var/log
 du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 
@@ -59,7 +59,6 @@ ls -la ~
 
 Display user home path list of files, 1st ran for root then 2nd with user
 
-```
 
 ---
 
@@ -72,38 +71,38 @@ Display user home path list of files, 1st ran for root then 2nd with user
 #### SOLVED EXAMPLE: Understanding How to Approach Scenarios
 
 **Example Scenario: Check if a service is running**
-```
+
 Question: How do you check if the 'ssh' service is running?
-```
+
 
 **My Solution (Step by step):**
 
 **Step 1:** Check service status
-```bash
+
 systemctl status ssh
 
 ![alt text](image-4.png)
 
-```
+
 **Why this command?** It shows if the service is active, failed, or stopped
 
 **Step 2:** If service is not found, list all services
-```bash
+
 systemctl list-units --type=service
 
 list all services on system and its status
 ![alt text](image-5.png)
 
-```
+
 **Why this command?** To see what services exist on the system
 
 **Step 3:** Check if service is enabled on boot
-```bash
+
 systemctl is-enabled ssh
 
 ![alt text](image-6.png)
 
-```
+
 **Why this command?** To know if it will start automatically after reboot
 
 **What I learned:** Always check status first, then investigate based on what you see.
@@ -115,7 +114,7 @@ Now try these scenarios yourself:
 ---
 
 **Scenario 1: Service Not Starting** 
-```
+
 A web application service called 'myapp' failed to start after a server reboot.
 What commands would you run to diagnose the issue?
 Write at least 4 commands in order.
@@ -133,7 +132,7 @@ as above log shows it was started at 04:04
 4) check if its enabled on boot with systemctl is-enabled <servicename>
 ![alt text](image-9.png)
 
-```
+
 
 **Hint:**
 - First check: Is the service running or failed?
@@ -143,9 +142,6 @@ as above log shows it was started at 04:04
 **Commands to explore:** `systemctl status myapp`, `systemctl is-enabled myapp`, `journalctl -u myapp -n 50`
 
 **Resource:** Review Day 04 (Process and Services practice)
-
-...
-```
 
 ---
 
@@ -182,7 +178,7 @@ What commands would you use?
 - Use -f flag to follow logs in real-time (like tail -f)
 
 **Commands to explore:**
-```bash
+
 # Check service status first
 systemctl status ssh
 
@@ -191,7 +187,7 @@ journalctl -u ssh -n 50
 
 # Follow logs in real-time
 journalctl -u ssh -f
-```
+
 
 **Resource:** Review Day 04 (Process and Services - Log checks section)
 
