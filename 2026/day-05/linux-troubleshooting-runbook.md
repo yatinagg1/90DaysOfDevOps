@@ -26,11 +26,56 @@ Follow these rules while creating your runbook:
   ![alt text](image.png)
 
   - **Filesystem sanity (2):** create a throwaway folder and file, e.g., `mkdir /tmp/runbook-demo`, `cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo`  
+
+![alt text](image-1.png)
+
   - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)  
+
+top - give output in old style processes usage of memory and cpu
+htop - gives output in newer , colored formated with scrollable output
+
+![alt text](image-2.png) ![alt text](image-3.png)
+
+free - gives output for memory usage
+
+![alt text](image-4.png)
+
+
+
   - **Disk / IO (2):** `df -h`, `du -sh /var/log`, `iostat`/`vmstat`/`dstat`  
+
+df - gives output with respect to the disk usage, total allocated, fee space
+du - gives output of usage for particular FS
+du is used to know which file consuming space which could be cleaned to solve disk space issue
+
+![alt text](image-5.png)
+
+iostat -I/O usage to display CPU, disk usage
+![alt text](image-6.png)
+
+vmstat - as name suggest virtual memory statistics
+![alt text](image-7.png)
+
+
+
   - **Network (2):** `ss -tulpn`/`netstat -tulpn`, `curl -I <service-endpoint>`/`ping`  
+
+netstat is old way to see port allocation/opened or closed and ss is modern usage
+![alt text](image-8.png)
+
+curl -I <service-endpoint> - give only header information of that service
+![alt text](image-9.png)
+
+
   - **Logs (2):** `journalctl -u <service> -n 50`, `tail -n 50 /var/log/<file>.log`
+
+journalctl - is used to display log in human readable format from binary stored files by systemd ( location /var/log/journal)
+/var/log/ - human readable text files for log by systemd
+
+
 - Choose **one target service/process** (e.g., `ssh`, `cron`, `docker`, your web app) and stick to it for the drill.
+
+
 - For each command, add a 1–2 line note on what you observed (e.g., “CPU spikes to 80% when restarting”, “No recent errors in last 50 lines”).
 - End with a **“If this worsens”** section listing 3 next steps you would take (ex: restart strategy, increase log verbosity, collect `strace`).
 - Keep it concise and actionable (aim for ~1 page).
