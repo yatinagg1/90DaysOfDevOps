@@ -57,23 +57,23 @@ ssh -i <key file> ubuntu@<public-ip>
 ### Part 2: Install Docker & Nginx (20 minutes)
 
 **Step 1: Update System**
-
+```bash
 sudo apt upgrade
-
+```
 ![alt text](image-3.png)
 
 **Step 3: Install Nginx**
-
+```bash
 sudo apt install docker.io
 sudo apt install nginx
-
+```
 ![alt text](image-4.png)
 
 **Verify Nginx is running:**
-
+```bash
 systemctl status nginx
 systemctl status docker
-
+```
 ![alt text](image-5.png)
 
 ---
@@ -86,6 +86,7 @@ Open browser and visit: `http://<your-instance-ip>:80`
 You should see the **Nginx welcome page**!
 
 Need make sure Security Group have inbound rule access for port 80 from anywhere to access nginx on the server
+
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
@@ -95,18 +96,20 @@ Need make sure Security Group have inbound rule access for port 80 from anywhere
 ### Part 4: Extract Nginx Logs (15 minutes)
 
 **Step 1: View Nginx Logs**
+
 nginx log location - /var/log/nginx
+
 ![alt text](image-8.png)
 
 **Step 2: Save Logs to File**
-
+```bash
 journalctl -u nginx > /tmp/nginx-logs.txt
 journalctl -u docker
-
+```
 ![alt text](image-9.png)
 
 **Step 3: Download Log File to Your Local Machine**
-
+```bash
 syntax:
 scp [username]@[remote_host]:[remote_file_path] [local_destination_path]
 
@@ -114,7 +117,7 @@ scp -v -i <key file name with path> ubuntu@<public-ip>:/tmp/nginx-logs.txt .
 . - for present location
 -v - to display connection, transfer (progress of download). its useful when you have issue and to check where its failing.
 -i - for authentication file name (path locally)
-
+```
 
 ![alt text](image-10.png)
 
