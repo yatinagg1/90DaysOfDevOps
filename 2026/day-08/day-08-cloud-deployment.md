@@ -39,6 +39,7 @@ By the end of today, you should have:
 ### Part 1: Launch Cloud Instance & SSH Access (15 minutes)
 
 **Step 1: Create a Cloud Instance**
+
 Remember to enable public ip address allocation
 ssh access from anywhere
 key pair need to be created as you would access from ssh
@@ -46,9 +47,9 @@ key pair need to be created as you would access from ssh
 ![alt text](image.png)
 
 **Step 2: Connect via SSH**
-
+```bash
 ssh -i <key file> ubuntu@<public-ip>
-
+```
 ![alt text](image-1.png)
 
 ---
