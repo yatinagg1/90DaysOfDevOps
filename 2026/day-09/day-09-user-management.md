@@ -110,26 +110,6 @@ id <username> or groups <username> - to check user in which all groups
 Create `day-09-user-management.md`:
 
 ```markdown
-# Day 09 Challenge
-
-## Users & Groups Created
-- Users: tokyo, berlin, professor, nairobi
-- Groups: developers, admins, project-team
-
-## Group Assignments
-[List who is in which groups]
-
-## Directories Created
-[List directories with permissions]
-
-## Commands Used
-[Your commands here]
-
-## What I Learned
-[3 key points]
-```
-
----
 
 
 ## Troubleshooting
