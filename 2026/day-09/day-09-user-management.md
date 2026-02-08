@@ -62,6 +62,7 @@ gpasswd -d <username> <groupname> - to delete user from group
 usermod -aG <groupname> <username> - to add user to group
 id <username> or groups <username> - to check user in which all groups
 ```
+
 ![alt text](image-2.png)
 ---
 
