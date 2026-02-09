@@ -24,8 +24,10 @@ Master file and directory ownership in Linux.
 
 Document: What's the difference between owner and group?
 
+
 Owner - creator of file or directory
 Group - group or team of users to which that file or folder belong
+
 ---
 
 ### Task 2: Basic chown Operations (20 minutes)
