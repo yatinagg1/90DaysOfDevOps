@@ -38,12 +38,17 @@ Format: `rwxrwxrwx` (owner-group-others)
 - `r` = read (4), `w` = write (2), `x` = execute (1)
 
 Check your files: `ls -l devops.txt notes.txt script.sh`
+
 ![alt text](image-2.png)
 
 Answer: What are current permissions? Who can read/write/execute?
+
 Owner - yatin
+
 Group - yatin
+
 Owner and group have read and write permissions (rw-)
+
 others have only read permission (r--)
 
 ---
