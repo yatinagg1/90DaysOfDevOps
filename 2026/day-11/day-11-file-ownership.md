@@ -26,6 +26,7 @@ Document: What's the difference between owner and group?
 
 
 Owner - creator of file or directory
+
 Group - group or team of users to which that file or folder belong
 
 ---
