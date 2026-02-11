@@ -112,3 +112,25 @@ extending /mnt/app-data by 1GB
 ![alt text](image-15.png)
 
 ![alt text](image-16.png)
+
+lvdisplay
+vgdisplay
+pvdisplay
+are useful commands to display information for the mapping of those volume/disk to pv -> vg -> lv
+
+Below screenshots to remove the disk from system
+
+umount the mount points
+lvremove to remove logical volume
+vgremove to remove volume group
+pvremove to remove physical volume
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+commented the life in fstab so system does not searches that disk to mount during booting.
