@@ -46,17 +46,26 @@ pvcreate /dev/sdb   # or your loop device
 pvs
 ```
 
+![alt text](image-6.png)
+
+
 ### Task 3: Create Volume Group
 ```bash
 vgcreate devops-vg /dev/sdb
 vgs
 ```
+![alt text](image-7.png)
+
+2 Physical Volume(PV) used to create 1 volume group and 0 logical volume(LV)
 
 ### Task 4: Create Logical Volume
 ```bash
 lvcreate -L 500M -n app-data devops-vg
 lvs
 ```
+
+![alt text](image-8.png)
+
 
 ### Task 5: Format and Mount
 ```bash
@@ -66,6 +75,10 @@ mount /dev/devops-vg/app-data /mnt/app-data
 df -h /mnt/app-data
 ```
 
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
 Below screenshot is to create mount point from single disk (no lvm usage)
 1- make file system with mkfs
 2- make directory in /mnt
@@ -74,7 +87,8 @@ Below screenshot is to create mount point from single disk (no lvm usage)
 
 ![alt text](image-3.png)
 
-![alt text](image-4.png)
+![alt text](image-5.png)
+
 
 ### Task 6: Extend the Volume
 ```bash
@@ -83,5 +97,8 @@ resize2fs /dev/devops-vg/app-data
 df -h /mnt/app-data
 ```
 
----
+![alt text](image-11.png)
 
+![alt text](image-12.png)
+
+/mnt/dev-data filesystem is extended by 200MB
