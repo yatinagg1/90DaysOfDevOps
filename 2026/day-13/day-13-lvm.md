@@ -102,3 +102,13 @@ df -h /mnt/app-data
 ![alt text](image-12.png)
 
 /mnt/dev-data filesystem is extended by 200MB
+
+![alt text](image-13.png)
+
+extending /mnt/app-data by 1GB
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
