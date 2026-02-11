@@ -130,13 +130,13 @@ are useful commands to display information for the mapping of those volume/disk 
 
 Below screenshots to remove the disk from system
 
-umount the mount points
+1- umount the mount points
 
-lvremove to remove logical volume
+2- lvremove to remove logical volume
 
-vgremove to remove volume group
+3- vgremove to remove volume group
 
-pvremove to remove physical volume
+4- pvremove to remove physical volume
 
 ![alt text](image-17.png)
 
