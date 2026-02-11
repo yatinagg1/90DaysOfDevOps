@@ -25,7 +25,9 @@ losetup -a   # Note the device name (e.g., /dev/loop0)
 ```
 
 ![alt text](image.png)
+
 1.42GB created to be attached directly without lvm
+
 2+3GB would be combined and attached via lvm
 
 ---
@@ -58,6 +60,7 @@ vgs
 
 2 Physical Volume(PV) used to create 1 volume group and 0 logical volume(LV)
 
+
 ### Task 4: Create Logical Volume
 ```bash
 lvcreate -L 500M -n app-data devops-vg
@@ -80,9 +83,13 @@ df -h /mnt/app-data
 ![alt text](image-10.png)
 
 Below screenshot is to create mount point from single disk (no lvm usage)
+
 1- make file system with mkfs
+
 2- make directory in /mnt
+
 3- mount the disk on that /mnt/ path
+
 4- make /etc/fstab entry so it remain permanent after reboot or system too and does not get unmounted
 
 ![alt text](image-3.png)
@@ -114,15 +121,21 @@ extending /mnt/app-data by 1GB
 ![alt text](image-16.png)
 
 lvdisplay
+
 vgdisplay
+
 pvdisplay
+
 are useful commands to display information for the mapping of those volume/disk to pv -> vg -> lv
 
 Below screenshots to remove the disk from system
 
 umount the mount points
+
 lvremove to remove logical volume
+
 vgremove to remove volume group
+
 pvremove to remove physical volume
 
 ![alt text](image-17.png)
