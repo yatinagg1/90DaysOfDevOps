@@ -117,7 +117,7 @@ traffic control or network isolation
 ### Task 4: Ports – The Doors to Services
 1. What is a port? Why do we need them?
 
-port are doors throw which data flows or coomicate with another host
+port are doors throw which data flows or communicate with another host
 
 a server could host multiple services (ftp, ssh, etc) those all talk to another server/client on particular port so they understnad each other words.
 
