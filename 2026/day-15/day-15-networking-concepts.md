@@ -88,7 +88,9 @@ private IP - are internal for office, or system to system talking without DC, LA
 2. How many usable hosts in a `/24`? A `/16`? A `/28`?
 
 /24 - 2^8-2 = 256-2 = 254
+
 /16 - 2^16-2 = 65536-2 = 65534
+
 /28 - 2^4-2 = 16-2 = 14
 
 3. Explain in your own words: why do we subnet?
