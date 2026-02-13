@@ -45,7 +45,7 @@ Avoid spaces during variable declaration, else it would result in failure as abo
 
 ![alt text](image-2.png)
 
-echo with '' resulted in line as it does not recognises the variables.
+echo with ' resulted in line as it does not recognises the variables.
 
 ![alt text](image-3.png)
 
