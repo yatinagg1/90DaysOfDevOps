@@ -17,12 +17,12 @@ You will:
 1. Create `for_loop.sh` that:
    - Loops through a list of 5 fruits and prints each one
 
-   ![alt text](image.png)
+   ![alt text](./images/image.png)
 
 2. Create `count.sh` that:
    - Prints numbers 1 to 10 using a for loop
 
-   ![alt text](image-1.png)
+   ![alt text](./images/image-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ You will:
 
 Using for loop
 
-![alt text](image-2.png)
+![alt text](./images/image-2.png)
 
 Using while loop
 
