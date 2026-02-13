@@ -38,7 +38,7 @@ Using for loop
 
 Using while loop
 
-![images](image-3.png)
+![alt text](image-3.png)
 
 ---
 
