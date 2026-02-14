@@ -76,6 +76,16 @@ Using for loop
 
 > Run as root: `sudo -i` or `sudo su`
 
+![alt text](./images/image-7.png)
+
+first attempt of script
+
+![alt text](./images/image-8.png)
+
+second attempt of script
+
+![alt text](./images/image-9.png)
+
 ---
 
 ### Task 5: Error Handling
@@ -86,12 +96,12 @@ Using for loop
    - Creates a file inside
    - Uses `||` operator to print an error if any step fails
 
-Example:
-```bash
-mkdir /tmp/devops-test || echo "Directory already exists"
-```
+![alt text](./images/image-10.png)
+
 
 2. Modify your `install_packages.sh` to check if the script is being run as root — exit with a message if not.
+
+![alt text](./images/image-11.png)
 
 ---
 
