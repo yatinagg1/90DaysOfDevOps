@@ -48,10 +48,21 @@ Using while loop
    - Prints `Hello, <name>!`
    - If no argument is passed, prints "Usage: ./greet.sh <name>"
 
+![alt text](./images/image-4.png)
+
+if [  -z "$1 ] - check if argument been not passed then enter if loop
+
+Using for loop
+
+![alt text](./images/image-5.png)
+
+
 2. Create `args_demo.sh` that:
    - Prints total number of arguments (`$#`)
    - Prints all arguments (`$@`)
    - Prints the script name (`$0`)
+
+![alt text](./images/image-6.png)
 
 ---
 
