@@ -1,14 +1,5 @@
 # Day 18 – Shell Scripting: Functions & Slightly Advanced Concepts
 
-## Task
-Write cleaner, reusable scripts — learn functions, strict mode, and real-world patterns.
-
-You will:
-- Write and call **functions**
-- Use **`set -euo pipefail`** for safer scripts
-- Work with **return values** and **local variables**
-- Build a slightly advanced script
-
 ---
 
 ## Challenge Tasks
@@ -19,9 +10,9 @@ You will:
    - A function `add` that takes two numbers and prints their sum
    - Call both functions from the script
 
-![alt text](image.png)
+![alt text](./images/image.png)
 
-Script called with arguments
+Script called with 3 arguments
 Those arguments are input for the function and observe how arguments changes value when function been called
 
 ---
@@ -32,10 +23,10 @@ Those arguments are input for the function and observe how arguments changes val
    - A function `check_memory` that checks free memory using `free -h`
    - A main section that calls both and prints the results
 
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
-Nesting of functions via main()
-Usage of awk , how we could use this prowerful tool/command in script
+Functions been called from another main()
+Usage of awk , how we could use this powerful command in script to fetch a particular information
 
 ---
 
@@ -50,6 +41,13 @@ Usage of awk , how we could use this prowerful tool/command in script
 - `set -u` → script exits if try to use a variable which is not defined
 - `set -o pipefail` → if any piped commands either 1 or 2 fails example - (command1| command2) , its considered failure for whole line
 
+output of script execution
+![alt text](./images/image-2.png)
+
+Script 
+![alt text](./images/image-3.png)
+
+
 ---
 
 ### Task 4: Local Variables
@@ -57,6 +55,11 @@ Usage of awk , how we could use this prowerful tool/command in script
    - A function that uses `local` keyword for variables
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
+
+![alt text](image-4.png)
+
+local variable has limit within the function itself were defined
+global variable has limit output the function too and returned as value
 
 ---
 
@@ -70,7 +73,14 @@ Create `system_info.sh` that uses functions for everything:
 6. A `main` function that calls all of the above with section headers
 7. Use `set -euo pipefail` at the top
 
-Output should look clean and readable.
+Output of the script
+![alt text](./images/image-5.png)
+
+Script contents
+![alt text](./images/image-6.png)
+
+Usage of sort in various command and method differently used
+How to automate daily task and get system information quickly
 
 ---
 
@@ -80,14 +90,5 @@ Output should look clean and readable.
 - Strict mode: `set -euo pipefail` as first line after shebang
 - Pass args to functions: `greet "Shubham"` → access as `$1` inside
 - `$?` gives the exit code of last command
-
----
-
-## Documentation
-
-Create `day-18-scripting.md` with:
-- Each script's code and output
-- Explanation of `set -euo pipefail`
-- What you learned (3 key points)
 
 ---
