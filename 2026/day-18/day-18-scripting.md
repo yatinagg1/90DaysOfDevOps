@@ -61,8 +61,8 @@ Script
 
 ![alt text](./images/image-4.png)
 
-- local variable has limit within the function itself were defined
-- global variable has limit output the function too and returned as value
+- local variable has limit within the function itself where its defined
+- global variable has no limit and returned as value
 
 ---
 
@@ -84,14 +84,5 @@ Script contents
 
 - Usage of sort in various command and method differently used
 - How to automate daily task and get system information quickly
-
----
-
-## Hints
-- Function syntax: `function_name() { ... }`
-- Local vars: `local MY_VAR="value"`
-- Strict mode: `set -euo pipefail` as first line after shebang
-- Pass args to functions: `greet "Shubham"` → access as `$1` inside
-- `$?` gives the exit code of last command
 
 ---
