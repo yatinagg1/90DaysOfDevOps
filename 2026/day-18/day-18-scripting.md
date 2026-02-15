@@ -12,8 +12,8 @@
 
 ![alt text](./images/image.png)
 
-Script called with 3 arguments
-Those arguments are input for the function and observe how arguments changes value when function been called
+- Script called with 3 arguments
+- Those arguments are input for the function and observe how arguments changes value when function been called
 
 ---
 
@@ -25,8 +25,8 @@ Those arguments are input for the function and observe how arguments changes val
 
 ![alt text](./images/image-1.png)
 
-Functions been called from another main()
-Usage of awk , how we could use this powerful command in script to fetch a particular information
+- Functions been called from another main()
+- Usage of awk , how we could use this powerful command in script to fetch a particular information
 
 ---
 
@@ -41,12 +41,15 @@ Usage of awk , how we could use this powerful command in script to fetch a parti
 - `set -u` → script exits if try to use a variable which is not defined
 - `set -o pipefail` → if any piped commands either 1 or 2 fails example - (command1| command2) , its considered failure for whole line
 
-output of script execution
+Output of script execution
+
 ![alt text](./images/image-2.png)
 
 Script 
+
 ![alt text](./images/image-3.png)
 
+- echo "DONE" - it will be executed if function called in previous step completes without issue/error but here functions are gave error and thus exited the script
 
 ---
 
@@ -56,10 +59,10 @@ Script
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
 
-![alt text](image-4.png)
+![alt text](./images/image-4.png)
 
-local variable has limit within the function itself were defined
-global variable has limit output the function too and returned as value
+- local variable has limit within the function itself were defined
+- global variable has limit output the function too and returned as value
 
 ---
 
@@ -79,8 +82,8 @@ Output of the script
 Script contents
 ![alt text](./images/image-6.png)
 
-Usage of sort in various command and method differently used
-How to automate daily task and get system information quickly
+- Usage of sort in various command and method differently used
+- How to automate daily task and get system information quickly
 
 ---
 
