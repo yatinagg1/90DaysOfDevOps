@@ -51,6 +51,7 @@ Error Handling
 1. Read: `crontab -l` — what's currently scheduled?
 
 Nothing for user - yatin and root both
+
 ![alt text](./images/image-4.png)
 
 2. Understand cron syntax:
@@ -100,4 +101,5 @@ Crontab addition
 - Usage of [ ! -d $dir ] - To validate if directory exists of not
 - Arguments $1, $2, $#, $? - usage in scripts
 - File handling and cleanup with -mtime
-- crontab entry
+- crontab entry and usage
+- How to combine scripts or functions to redirect output to single location
