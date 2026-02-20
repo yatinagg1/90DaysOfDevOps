@@ -42,6 +42,7 @@ Script:
 ![alt text](./images/image-3.png)
 
 Error Handling
+
 ![alt text](./images/image-5.png)
 
 ---
