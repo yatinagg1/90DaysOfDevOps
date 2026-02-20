@@ -18,17 +18,14 @@ GIT - Global Information Tracker
 ### Task 1: Install and Configure Git
 1. Verify Git is installed on your machine
 
-3 commands used to verify if git installed as shown below (git --version is easy and fasted to give result)
+- 3 commands used to verify if git installed as shown below (git --version is easy and fasted to give result)
 
 ![alt text](./images/image.png)
 
-By default git is installed in Linux but for Windows we need to install git bash and then use it
-
-You could install git on Linux via CLI too if not present
-
-update the system - apt update && apt install git
-
-Check this link for installation - https://blog.amitabh.cloud/installing-and-configuring-git
+- By default git is installed in Linux but for Windows we need to install git bash and then use it
+- You could install git on Linux via CLI too if not present
+- update the system - apt update && apt install git
+- Check this link for installation - https://blog.amitabh.cloud/installing-and-configuring-git
 
 
 2. Set up your Git identity — name and email
@@ -43,20 +40,17 @@ To setup global identity:
 
 ![alt text](./images/image-1.png)
 
-As above we created a directory name "devops-git-practice" (Called a git repo - local) and initialized git repo in it via `git init`
-
-That created .git (hidden) file where version control system (VCS) for git been kept. IMPORTANT STUFF
-
-then setup user name and email id information for git, this would be used to know as version of file / folder get updated in git.
+- As above we created a directory name "devops-git-practice" (Called a git repo - local) and initialized git repo in it via `git init`
+- That created .git (hidden) file where version control system (VCS) for git been kept. IMPORTANT STUFF
+- then setup user name and email id information for git, this would be used to know as version of file / folder get updated in git.
 
 
 3. Verify your configuration
 
 ![alt text](./images/image-2.png)
 
-As above we could see local user.name and emailid for git repo - devops-git-practice
-
-Also global user.name and email also listed via command which is for server name yatin-Ubuntu24
+- As above we could see local user.name and emailid for git repo - devops-git-practice
+- Also global user.name and email also listed via command which is for server name yatin-Ubuntu24
 
 ---
 
