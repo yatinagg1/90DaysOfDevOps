@@ -92,4 +92,10 @@ Archive of log file after processing
 
 Script log_analyzer.sh
 
-![alt text](./images/image-3.png)
+![alt text](./images/image-4.png)
+
+Learning
+- How to break task into smaller tasks or functions and achieve the desired result.
+- Use of grep, awk, sort, uniq, wc, sed etc.
+- How to validate inputs and handle errors before processing it.
+- Writing structured summary report output.
