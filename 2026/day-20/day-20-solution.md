@@ -94,7 +94,7 @@ Script log_analyzer.sh
 
 ![alt text](./images/image-4.png)
 
-Learning
+### Learning
 - How to break task into smaller tasks or functions and achieve the desired result.
 - Use of grep, awk, sort, uniq, wc, sed etc.
 - How to validate inputs and handle errors before processing it.
