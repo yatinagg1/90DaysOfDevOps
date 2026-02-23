@@ -20,7 +20,7 @@
 | File Test |	`[ -f file ]` | 	`[ -d /home ]` |
 | Case Statement |	`case $v in ... esac`	 | `case $1 in start) echo run ;; esac` |
 | AND |	`cmd1 && cmd2` |	`mkdir test && cd test` |
-| OR |	`cmd1 || cmd2` |	`cd dir || pwd` |
+| OR |	`cmd1  cmd2` |	`cd dir  pwd` |
 | C-Style For |	`for ((i=1;i<=3;i++))` |	`for ((i=1;i<=3;i++)); do touch f$i; done` |
 | While Loop |	`while [ cond ]; do` |	`while [ $a -lt 5 ]; do echo $a; done` |
 | Until Loop |	`until [ cond ]; do` |	`until ping -c1 google.com; do sleep 2; done` |
