@@ -1,7 +1,7 @@
-# Day 22 – Introduction to Git: Your First Repository
+# Day 22 – Introduction to Git:
 
 
-Git is the backbone of modern DevOps — every tool, pipeline, and workflow revolves around version control. Before diving into advanced concepts, you need to get comfortable with the basics by doing.
+Git is the backbone of modern DevOps — every tool, pipeline, and workflow revolves around version control. Before diving into advanced concepts, we need to get comfortable with the basics by doing.
 
 - Understand what Git is and why it matters
 - Set up first Git repository from scratch
@@ -28,17 +28,22 @@ GIT - Global Information Tracker
 2. Set up your Git identity — name and email
 
 To setup local identity for particular project:
+
 `git config user.name "user name"`
+
 `git config user.email "user emailid"`
 
 To setup global identity:
+
 `git config --global user.name "username"`
+
 `git config --global user.email "user emailid"`
 
 ![alt text](./images/image-1.png)
 
 - As above we created a directory name "devops-git-practice" (Called a git repo - local) and initialized git repo in it via `git init`
-- That created .git (hidden) file where version control system (VCS) for git been kept. IMPORTANT STUFF
+- That created .git (hidden) file where version control system (VCS) for git been kept. ### IMPORTANT STUFF ###
+
 - then setup user name and email id information for git, this would be used to know as version of file / folder get updated in git.
 
 
@@ -62,6 +67,7 @@ To setup global identity:
 `git status` - gives working branch and other files in git repo which are present in various stages in git repo as commit of those file progress.
 
 `.git/` - folder has various folders and files related to git repo
+
 it contains configuration file, header file, description of repo, branches folders etc
 
 ![alt text](./images/image-4.png)
@@ -129,6 +135,7 @@ We observe commit been done at master/main branch by YatinAg with emailid of use
 1. What is the difference between `git add` and `git commit`?
 
 `git add` - put file from untracking to stage state in git repo, until we perform git add its like a file in File system which could not be restored if removed
+
 `git commit` - put the file from staged to tracking state
 
 2. What does the **staging area** do? Why doesn't Git just commit directly?
@@ -145,9 +152,9 @@ Its centralised system where all commit, branch, project details etc been stored
 
 5. What is the difference between a **working directory**, **staging area**, and **repository**?
 
-Working Directory - is branch in which user working and making changes.
-staging area - is temporary area where user move file before commit in repo
-repository - is where we hold the VCS for the folder.
+- Working Directory - is branch in which user working and making changes.
+- staging area - is temporary area where user move file before commit in repo
+- repository - is where we hold the VCS for the folder.
 
 ---
 
