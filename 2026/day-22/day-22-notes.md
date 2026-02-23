@@ -1,19 +1,16 @@
 # Day 22 – Introduction to Git: Your First Repository
 
-## Task
 
-Today marks the beginning of your Git journey. Git is the backbone of modern DevOps — every tool, pipeline, and workflow revolves around version control. Before diving into advanced concepts, you need to get comfortable with the basics by doing.
+Git is the backbone of modern DevOps — every tool, pipeline, and workflow revolves around version control. Before diving into advanced concepts, you need to get comfortable with the basics by doing.
 
-You will:
 - Understand what Git is and why it matters
-- Set up your first Git repository from scratch
+- Set up first Git repository from scratch
 - Start building a living document of Git commands
 
 ---
 
 GIT - Global Information Tracker
 
-## Challenge Tasks
 
 ### Task 1: Install and Configure Git
 1. Verify Git is installed on your machine
@@ -154,9 +151,3 @@ repository - is where we hold the VCS for the folder.
 
 ---
 
-## Hints
-- All you need today are about 8-10 Git commands — Google them, try them, break things
-- Read what `git status` tells you — it's your best friend
-- Use `man git-<command>` or `git <command> --help` to explore
-
----
