@@ -3,7 +3,7 @@
 | Topic | Key Syntax | Example |
 |-------|-----------|---------|
 | Variable | `VAR="value"` | `NAME="DevOps"` |
-| Argument | `$1`, `$2` | `./script.sh arg1` |
+| Argument | `$1`, `$2` `$#` `$@` `#?` | `./script.sh arg1` |
 | If | `if [ condition ]; then` | `if [ -f file ]; then` |
 | For loop | `for i in list; do` | `for i in 1 2 3; do` |
 | Function | `name() { ... }` | `greet() { echo "Hi"; }` |
@@ -12,11 +12,35 @@
 | Sed | `sed 's/old/new/g' file` | `sed -i 's/foo/bar/g' config.txt` |
 | Make Executable | `chmod +x file.sh` | `chmod +x script.sh` |
 | Run Script | `./file.sh` | ` ./script.sh` |
+| Comment |	`# comment` |	`echo "Hi" # inline comment` |
+| Use Variable | `$VAR` | `echo $NAME` |
+| Read Input |	`read VAR` |	`read USER` |
+| String Compare |	`[ "$a" = "$b" ]` |	`[ "$name" = "Linux" ]` |
+| Integer Compare |	`[ $a -gt 10 ]`  | `[ $num -eq 5 ]` |
+| File Test |	`[ -f file ]` | 	`[ -d /home ]` |
+| Case Statement |	`case $v in ... esac`	 | `case $1 in start) echo run ;; esac` |
+| AND |	`cmd1 && cmd2` |	`mkdir test && cd test` |
+| OR |	`cmd1 || cmd2` |	`cd dir || pwd` |
+| C-Style For |	`for ((i=1;i<=3;i++))` |	`for ((i=1;i<=3;i++)); do touch f$i; done` |
+| While Loop |	`while [ cond ]; do` |	`while [ $a -lt 5 ]; do echo $a; done` |
+| Until Loop |	`until [ cond ]; do` |	`until ping -c1 google.com; do sleep 2; done` |
+| Break	 | `break` |	`if [ $i -eq 5 ]; then break; fi` |
+| Continue |	`continue`	 | `if [ $i -eq 2 ]; then continue; fi` |
+| Function Arg |	`$1 inside function` |	`add(){ echo $(($1+$2)); }` |
+| Return Status |	`return 0` |	`return 1` |
+| Capture Output |	`result=$(func)` |	`val=$(date)` |
+| Local Variable |	`local var=value`	| `local count=10` |
+| cut |	`cut -d: -f1 file` |	`cut -d: -f1 /etc/passwd` |
+| sort |	`sort file` |  `sort -n numbers.txt` |
+| uniq |	`sort file  uniq` |	`sort file  uniq -c` |
+| tr |	`tr 'a-z' 'A-Z'` |	`echo hi  tr 'a-z' 'A-Z'` |
+| wc |	`wc -l file` |	`wc -w file.txt` |
+| head |	`head -n 5 file` |	`head -n 10 log.txt` |
+| tail |	`tail -f file` |	`tail -f app.log` |
 
 
 ### Task 1: Basics
-Document the following with short descriptions and examples:
-1. Shebang (`#!/bin/bash`) — what it does and why it matters
+1. Shebang (`#!/bin/bash`) —
 
 It tells the script to execute in which shell so that script could work properly without this line script would be executed in default shell of the user.
 
@@ -37,17 +61,19 @@ Comments are used to make it readable and understandable script for others and l
 
 4. Variables — declaring, using, and quoting (`$VAR`, `"$VAR"`, `'$VAR'`)
 
-example below
+```
 VAR=4
 echo $VAR                   # print value of VAR thats 4
 echo "Value of VAR - $VAR"  # output would be Value of VAR - 4
 echo 'Value of VAR - $VAR'  # output would be Balue of VAR - $VAR
+```
 
 5. Reading user input — `read`
 
 Used to get input from the user
+```
 read -p "Enter a number - " $x
-
+```
 
 6. Command-line arguments — 
 
@@ -61,7 +87,7 @@ read -p "Enter a number - " $x
 ---
 
 ### Task 2: Operators and Conditionals
-Document with examples:
+
 1. String comparisons — 
 `=` - Check 2 strings are equal or not
 `!=` - Check 2 strings are not equal
@@ -94,13 +120,13 @@ Document with examples:
 `||` - logical OR operator, used to return success if either of 1st or 2nd command successful
 `!`  - negation operator, used to return opposite of condition
 
+```
 if [ ! -f test.txt ] - this checks test.txt should not be file
-
+```
 
 6. Case statements — `case ... esac` - used to handle multiple statement conditions instead of using many if then elif then else 
 
 ```
-
 #!/bin/bash
 
 echo "Enter your command (start, stop, or status):"
@@ -131,12 +157,11 @@ esac
 ---
 
 ### Task 3: Loops
-Document with examples:
+
 1. `for` loop — 
 a. list-based - to iterate for each item in list
 
 ```
-#!/bin/bash
 for FRUIT in apple banana cherry
 do
     echo "I like to eat $FRUIT"
