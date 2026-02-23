@@ -95,6 +95,7 @@ read -p "Enter a number - " $x
 ### Task 2: Operators and Conditionals
 
 1. String comparisons — 
+
 `=` - Check 2 strings are equal or not
 
 `!=` - Check 2 strings are not equal
@@ -102,6 +103,7 @@ read -p "Enter a number - " $x
 `-z` - check if string is empty
 
 `-n`-  Checks if a string is not empty (contains characters)
+
 
 2. Integer comparisons — 
 
@@ -116,6 +118,7 @@ read -p "Enter a number - " $x
 `-le` - check 3 is less than or equal to 5 too
 
 `-ge` - check 3 is greater than or equal too
+
 
 3. File test operators — 
 
@@ -133,11 +136,13 @@ read -p "Enter a number - " $x
 
 `-s` - check if file is not empty
 
+
 4. `if` - used to check 1st condition then enter the loop 
   
    `elif` - check 2nd condition then enter it to perform task , looping if then else
   
    `else` - if no conditions satisfied then enter this as default task to be performed
+
 
 5. Logical operators — 
 
@@ -643,6 +648,3 @@ echo "Hello" → prints + echo Hello
 	trap 'cleanup' EXIT
 cleanup() { echo "Cleaning up..."; } → runs on exit
 ```
-
----
-
