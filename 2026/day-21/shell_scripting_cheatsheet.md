@@ -52,7 +52,9 @@ echo "Hello, World"
 
 2. Running a script — 
 `chmod +x` - makes the file executable without it script could not be executed/run 
+
 `./script.sh` - method to execute the script of the path/directory where its been kept
+
 `bash script.sh` - method to execute the script with bash shell
 
 3. Comments — single line (`#`) and inline
@@ -78,9 +80,13 @@ read -p "Enter a number - " $x
 6. Command-line arguments — 
 
 `$0` - Script name
+
 `$1` - 1st argument passed to the script, so on `$2` . `$3` etc if any
+
 `$#` - Count number of arguments pass to the scripts
+
 `$@` - All Arguments
+
 `$?` - Last command status, used to check if it was successful or not so to take next action accordingly
 
 
@@ -90,34 +96,55 @@ read -p "Enter a number - " $x
 
 1. String comparisons — 
 `=` - Check 2 strings are equal or not
+
 `!=` - Check 2 strings are not equal
+
 `-z` - check if string is empty
+
 `-n`-  Checks if a string is not empty (contains characters)
 
 2. Integer comparisons — 
+
 `-eq` - check 2 numbers are equal
+
 `-ne` - Check 2 numbers are not equal
+
 `-lt` - check 3 is less than 5 or not
+
 `-gt` - check 5 is greater than 3 or not
+
 `-le` - check 3 is less than or equal to 5 too
+
 `-ge` - check 3 is greater than or equal too
 
 3. File test operators — 
+
 `-f`- check if file exists or not
+
 `-d`- check for if path exists and is a directory or not
+
 `-e` - check if file or directory exists
+
 `-r`- check if file has read permission
+
 `-w`- check if file has write permission
+
 `-x` - check if file has executable permission
+
 `-s` - check if file is not empty
 
 4. `if` - used to check 1st condition then enter the loop 
+  
    `elif` - check 2nd condition then enter it to perform task , looping if then else
+  
    `else` - if no conditions satisfied then enter this as default task to be performed
 
 5. Logical operators — 
+
 `&&` - logical AND operator, used to execute 1st and 2nd command and return success only if both are successful
+
 `||` - logical OR operator, used to return success if either of 1st or 2nd command successful
+
 `!`  - negation operator, used to return opposite of condition
 
 ```
@@ -159,6 +186,7 @@ esac
 ### Task 3: Loops
 
 1. `for` loop — 
+
 a. list-based - to iterate for each item in list
 
 ```
@@ -200,6 +228,7 @@ done
 ```
 
 4. Loop control — 
+
 `break`- come out of loop immediately
 ```
 for FILE in *.log; do
@@ -271,8 +300,10 @@ Hello, Yatin!
 ```
 
 4. Return values — `return` vs `echo` - 
-retun used to return a value (0-255) by a function to calling function and exit the function.
-echo is print statement or value on screen or file
+
+`return` used to return a value (0-255) by a function to calling function and exit the function.
+
+`echo` is print statement or value on screen or file
 
 ```
 check_service() {
@@ -302,7 +333,8 @@ usage=$(get_disk_usage /var/log)
 echo "Disk usage of /var/log: $usage"
 ```
 
-5. Local variables — `local` - defination of variable inside a function only. `local` keyword before the variable is important else by default variables are global
+5. Local variables — 
+`local` - defination of variable inside a function only. `local` keyword before the variable is important else by default variables are global
 
 ```
 count_files() {
@@ -319,16 +351,22 @@ echo $total   # empty, because 'total' is local as globally total is not defined
 ---
 
 ### Task 5: Text Processing Commands
-Document the most useful flags/patterns for each:
 1. `grep` — search patterns,
+ 
  `-i` - ignore case does not care of uppercase or lowercase, as by default it's case sensitive `grep -i ERROR test.txt`
+ 
  `-r` - recursive search in currect directory and subdirectories `grep -r "todo"`
+ 
  `-c` - count matching lines `grep -c error test.txt`
+ 
  `-n` - show line numbers for matching word/phrase line `grep -n ERROR test.log`
+ 
  `-v` - lines that don't match `grep -v error test.log`
+ 
  `-E` - searches multiple patterns with extended regex `grep -E "Error|Failed" test.log`
 
 2. `awk` — Process and extract text from files or input,especially by columns/fields.
+
 print columns - Extract and display specific columns from text.
 ```
 awk '{print $1, $2}' file
@@ -354,6 +392,7 @@ awk -F ":" 'BEGIN {print "Users list:"} {print $1} END {print "Done"}' /etc/pass
 ```
 
 3. `sed` — to search and replace operator in a text , it can also delete, insert, append text in files or piped input
+
 substitution - Substitute first match in a line
 ```
 sed 's/pattern/replacement/' file
@@ -413,8 +452,9 @@ bananas,2
 kiwis,3
 oranges,20
 ```
- numerical
- ```
+
+numerical
+```
  sort -n numbers.txt
 
 if numbers.txt
@@ -429,9 +469,9 @@ Output
 10
 90
 ```
-  reverse
-  ```
-  sort -r fruits.txt
+reverse
+```
+sort -r fruits.txt
 
 output
 oranges,20
@@ -439,9 +479,9 @@ kiwis,3
 bananas,2
 apples,1
 ```
-   unique
-   ```
-   sort -u list.txt
+unique
+```
+sort -u list.txt
 
 The -u option sorts the file and keeps only one copy of each unique line.
 ```
@@ -456,9 +496,10 @@ sort -o fruits.txt fruits.txt
 ```
 
 6. `uniq` — Removes consecutive duplicate lines,also count occurrences.
+
  deduplicate
- ```
- # Sample file content (apple.txt):
+```
+# Sample file content (apple.txt):
 # apple
 # orange
 # orange
@@ -479,9 +520,9 @@ orange
 watermelon
 ```
 
-  count - 
-  ```
-  sort apple.txt | uniq -c
+count - 
+```
+sort apple.txt | uniq -c
 
 Output
       4 apple
@@ -500,12 +541,12 @@ watermelon
 7. `tr` — translate/delete characters
 
 ```
-    echo "hello"     | tr 'a-z' 'A-Z'   # convert to uppercase
+ echo "hello"     | tr 'a-z' 'A-Z'   # convert to uppercase
 
     Output
     HELLO
 
-    echo "hello 123" | tr -d '0-9'  # delete digits
+ echo "hello 123" | tr -d '0-9'  # delete digits
 
     Output
     hello
@@ -529,7 +570,7 @@ watermelon
 ---
 
 ### Task 6: Useful Patterns and One-Liners
-Include at least 5 real-world one-liners you find useful. Examples:
+
 - Find and delete files older than N days
 ```
 find /var/log -type f -name "*.log" -mtime +15 -exec rm -f {} \;
@@ -568,15 +609,22 @@ tail -f /var/log/syslog | grep -E 'ERROR|CRITICAL'
 ---
 
 ### Task 7: Error Handling and Debugging
-Document with examples:
+
 1. Exit codes — 
 `$?` - stores previous run command/script/function exit status
+
 `exit 0` - store success for the function or script
+
 `exit 1` - terminate the script or function immediately with failure
+
 2. `set -e` — exit on error - Exit immediately if a command fails
+
 3. `set -u` — treat unset variables as error - Error if using an unset variable
+
 4. `set -o pipefail` — catch errors in pipes - 	Fail if any command in a pipeline fails
+
 5. `set -x` — debug mode (trace execution) - Debug mode (show commands before running)
+
 6. Trap — `trap 'cleanup' EXIT` - Run cleanup function when script exits
 
 ```
