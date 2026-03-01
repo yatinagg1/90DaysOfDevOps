@@ -102,6 +102,7 @@ pushed main to remote on github
 6. What is the difference between `origin` and `upstream`?
 - origin is the remote url from which you have cloned your local repo, where you have read (pull) and write (push) permissions
 example - https://github.com/yatinagg1/devops-git-practice.git
+
 https://github.com/yatinagg1/90DaysOfDevOps.git
 
 - upstream is the remote (public) repo url which you have forked on your github repo. you have read (pull) permissions
